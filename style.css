@@ -13,4 +13,57 @@ main {
     background-size: cover;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s;
+}
+
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+}
